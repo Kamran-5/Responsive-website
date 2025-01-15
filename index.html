@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./Frontend/style.css" />
+    <title>GrandSuite</title>
+  </head>
+  <body>
+    <nav>
+  <div class="nav__header">
+    <div class="nav__logo">
+      <a href="#" class="logo">GrandSuite</a>
+    </div>
+    <div class="nav__menu__btn" id="menu-btn">
+      <i class="ri-menu-line"></i>
+    </div>
+  </div>
+  <ul class="nav__links" id="nav-links">
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#tour">TOUR</a></li>
+    <li><a href="#package">PACKAGE</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+  <div class="nav__btns">
+    <button class="btn" onclick="openModal('signInModal')">SIGN IN</button>
+    <button class="btn btn-signup" onclick="openModal('signUpModal')">SIGN UP</button>
+  </div>
+</nav>
+
+<!-- Sign In Modal -->
+<div id="signInModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('signInModal')">&times;</span>
+    <h2>Sign In</h2>
+    <form id="signInForm">
+      <label for="email">Email</label>
+      <input type="email" id="signInEmail" name="email" required>
+      <label for="password">Password</label>
+      <input type="password" id="signInPassword" name="password" required>
+      <button type="submit" class="btn">Sign In</button>
+    </form>
+  </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signUpModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('signUpModal')">&times;</span>
+    <h2>Sign Up</h2>
+    <form id="signUpForm">
+      <label for="username">Username</label>
+      <input type="text" id="signUpUsername" name="username" required>
+      <label for="email">Email</label>
+      <input type="email" id="signUpEmail" name="email" required>
+      <label for="password">Password</label>
+      <input type="password" id="signUpPassword" name="password" required>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+
+    <header id="home">
+      <div class="header__container">
+        <div class="header__content">
+          <p>WELCOME TO YOUR LUXURY ESCAPE</p>
+          <h1>Experience Unmatched Comfort and Elegance</h1>
+          <div class="header__btns">
+            <button class="btn">Book Your Stay Now</button>
+            <a href="#">
+              <span><i class="ri-play-circle-fill"></i></span>
+            </a>
+          </div>
+        </div>
+       
+    </header>
+
+    <section class="section__container destination__container" id="about">
+      <h2 class="section__header">Our Most Popular Rooms</h2>
+      <p class="section__description">
+        Explore the Best Rooms at Our Luxury Hotels Worldwide
+      </p>
+      <div class="destination__grid">
+        <div class="destination__card">
+          <img src="./Frontend/room-1.jpg" alt="luxury room" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Oceanfront Luxury Suite</h4>
+              <p>Starting from $120</p>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.9
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="./Frontend/room-2.jpg" alt="luxury room" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Château Royale Room</h4>
+              <p>Starting from $199</p>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.8
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="./Frontend/room-3.jpg" alt="luxury room" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Private Pool Villa</h4>
+              <p>Starting from $249</p>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              5.0
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container journey__container" id="tour">
+      <h2 class="section__header">Your Perfect Stay Made Simple!</h2>
+      <p class="section__description">
+        Effortless Booking for Your Next Hotel Experience
+      </p>
+      <div class="journey__grid">
+        <div class="journey__card">
+          <div class="journey__card__bg">
+            <span><i class="ri-bookmark-3-line"></i></span>
+            <h4>Seamless Booking Process</h4>
+          </div>
+          <div class="journey__card__content">
+            <span><i class="ri-bookmark-3-line"></i></span>
+            <h4>Easy Reservations, One Click Away</h4>
+            <p>
+              From room bookings to exclusive offers, everything you need is
+              available at your fingertips, ensuring your stay is smooth and
+              hassle-free.
+            </p>
+          </div>
+        </div>
+        <div class="journey__card">
+          <div class="journey__card__bg">
+            <span><i class="ri-landscape-fill"></i></span>
+            <h4>Tailored Room Selections</h4>
+          </div>
+          <div class="journey__card__content">
+            <span><i class="ri-landscape-fill"></i></span>
+            <h4>Customized Stays Just for You</h4>
+            <p>
+              Whether you prefer a beachfront suite or a city-center apartment,
+              we offer personalized room options tailored to your needs,
+              ensuring a comfortable and memorable stay.
+            </p>
+          </div>
+        </div>
+        <div class="journey__card">
+          <div class="journey__card__bg">
+            <span><i class="ri-map-2-line"></i></span>
+            <h4>Expert Local Insights</h4>
+          </div>
+          <div class="journey__card__content">
+            <span><i class="ri-map-2-line"></i></span>
+            <h4>Insider Tips for Your Stay</h4>
+            <p>
+              Discover the best local attractions, dining options, and hidden
+              gems around your hotel, with expert recommendations that make you
+              feel like a local.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container showcase__container" id="package">
+      <div class="showcase__image">
+        <img src="./Frontend/2603.jpg" alt="showcase" />
+      </div>
+      <div class="showcase__content">
+        <h4>UNLEASH COMFORT WITH SKYHOTEL</h4>
+        <p>
+          Experience unparalleled comfort and luxury with Skyhotel, where your
+          dream stay becomes a reality. Our mission is to offer an exceptional
+          hotel experience, whether you're seeking a tranquil getaway, a vibrant
+          city escape, or a historical retreat. At Skyhotel, we provide
+          hand-picked properties and personalized stays to ensure each visit is
+          perfectly suited to your needs. Explore serene resorts, stylish city
+          hotels, and charming boutique accommodations that promise relaxation
+          and memorable moments.
+        </p>
+        <p>
+          With Skyhotel as your trusted partner, booking your ideal stay has
+          never been easier. Our expert recommendations and local insights
+          ensure you discover the best spots to relax, dine, and explore, making
+          your time away from home feel like an extension of your own. From your
+          first booking to your last day at the hotel, we’re committed to making
+          your stay effortless and unforgettable.
+        </p>
+        <div class="showcase__btn">
+          <button class="btn">
+            Book Your Stay Now
+            <span><i class="ri-arrow-right-line"></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container banner__container">
+      <div class="banner__card">
+        <h4>10+</h4>
+        <p>Years Experience</p>
+      </div>
+      <div class="banner__card">
+        <h4>12K</h4>
+        <p>Happy Clients</p>
+      </div>
+      <div class="banner__card">
+        <h4>4.8</h4>
+        <p>Overall Ratings</p>
+      </div>
+    </section>
+
+    <section class="section__container discover__container">
+      <h2 class="section__header">Discover Your Perfect Stay</h2>
+      <p class="section__description">
+        Explore Our Hand-Picked Hotels and Unique Accommodations
+      </p>
+      <div class="discover__grid">
+        <div class="discover__card">
+          <span><i class="ri-camera-lens-line"></i></span>
+          <h4>Luxury Hotels</h4>
+          <p>
+            Experience world-class amenities and sophisticated design, offering
+            an elegant atmosphere for your stay.
+          </p>
+        </div>
+        <div class="discover__card">
+          <span><i class="ri-ship-line"></i></span>
+          <h4>Beach Resorts</h4>
+          <p>
+            Unwind in tropical settings with breathtaking ocean views, perfect
+            for those seeking relaxation and tranquility.
+          </p>
+        </div>
+        <div class="discover__card">
+          <span><i class="ri-landscape-line"></i></span>
+          <h4>Charming Boutique Hotels</h4>
+          <p>
+            Stay in one-of-a-kind properties with personalized service, offering
+            a unique and intimate experience in every corner.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container client__container">
+      <h2 class="section__header">Loved By Thousands of Guests</h2>
+      <p class="section__description">
+        Discover the unforgettable experiences and cherished memories shared by
+        our happy clients.
+      </p>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__content">
+                <div class="client__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                </div>
+                <p>
+                  "My stay at the Grand Palace Hotel was beyond expectations.
+                  The service, ambiance, and attention to detail were
+                  exceptional. I felt pampered from start to finish. I highly
+                  recommend this hotel for anyone seeking luxury and comfort!"
+                </p>
+              </div>
+              <div class="client__details">
+                <img src="./Frontend/client-1.jpg" alt="client" />
+                <div>
+                  <h4>John Adams</h4>
+                  <h5>Travel Blogger</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__content">
+                <div class="client__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                </div>
+                <p>
+                  "I had the most wonderful time at Sunset Beach Resort. The
+                  location was perfect, and the staff went above and beyond to
+                  make my stay memorable. Plus the food was delicious and fresh.
+                  The views were spectacular, and I can't wait to return!"
+                </p>
+              </div>
+              <div class="client__details">
+                <img src="./Frontend/client-2.jpg" alt="client" />
+                <div>
+                  <h4>Emily Thompson</h4>
+                  <h5>Adventure Enthusiast</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__content">
+                <div class="client__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                </div>
+                <p>
+                  "The Royal Suites Hotel exceeded all my expectations. From the
+                  luxurious rooms to the exceptional dining, every aspect of my
+                  stay was perfect. I felt like royalty during my visit, and I
+                  highly recommend it to anyone seeking top-tier
+                  accommodations."
+                </p>
+              </div>
+              <div class="client__details">
+                <img src="./Frontend/client-3.jpg" alt="client" />
+                <div>
+                  <h4>Sarah Lee</h4>
+                  <h5>Cultural Historian</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__content">
+                <div class="client__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                </div>
+                <p>
+                  "My stay at the City Central Hotel was fantastic. The staff
+                  were professional and attentive, and the facilities were
+                  second to none. The location was ideal for both business and
+                  leisure. I'll definitely be returning on my next trip!"
+                </p>
+              </div>
+              <div class="client__details">
+                <img src="./Frontend/client-4.jpg" alt="client" />
+                <div>
+                  <h4>David Patel</h4>
+                  <h5>Business Executive</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">Grand Suites Hotel</a>
+          </div>
+          <p>
+            Experience luxury and comfort like never before at Grand Suites
+            Hotel. Where elegance meets relaxation, our goal is to ensure your
+            stay is unforgettable. Your perfect getaway starts here.
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-line"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a href="#">Dining</a></li>
+            <li><a href="#">Special Offers</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="#">
+                <span><i class="ri-phone-fill"></i></span> +971 968234701
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-record-mail-line"></i></span>
+                info@grandsuiteshotel.com
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-map-pin-2-fill"></i></span> Dubai, UAE
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Subscribe</h4>
+          <form action="/">
+            <input type="text" placeholder="Enter your email" />
+            <button class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 Grand Suites Hotel. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./Frontend/index.js"></script>
+  </body>
+</html>
